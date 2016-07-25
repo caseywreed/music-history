@@ -78,7 +78,6 @@ function populateSongs(songs) {
     <ul><li>${songs.artist}</li>
     <li>${songs.album}</li>
     <li>${songs.genre}</li></ul>`
-
 }
 
 
@@ -88,3 +87,37 @@ function populateSongs(songs) {
 //The function should collect the values of the input fields,
 //add them to the songs object, and then re-run the populateSongs() function
 //to refresh the main page. Maybe it could even navigate to the main page itself?
+
+//EVENT LISTENERS
+
+addButton = document.getElementById("addButton")
+addButton.addEventListener("click", addSong)
+
+addArtist = document.getElementById("addArtist")
+addName = document.getElementById("addName")
+addAlbum = document.getElementById("addAlbum")
+addGenre = document.getElementById("addGenre")
+
+function addSong () {
+  console.log("addSong is running")
+  songs.push({
+    artist: `${addArtist.value}`,
+    name: `${addName.value}`,
+    album: `${addAlbum.value}`,
+    genre: `${addGenre.value}`,
+  })
+  console.log(songs)
+  populateSongs(songs[songs.length - 1])
+}
+
+
+
+
+
+
+
+
+
+
+
+
