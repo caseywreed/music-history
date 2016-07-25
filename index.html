@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music History</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<div id="maindiv">
+
+<!-- NAVIGATION BAR -->
+
+	<nav id="navbar" class="border">
+		<ul>
+			<a href="#"><li>View Music</li></a>
+			<a href="#"><li>Add Music</li></a>
+			<a href="#"><li>Profile</li></a>
+		</ul>
+	</nav>
+
+<!-- SIDE BAR -->
+
+	<section id="sidebar" class="border">
+
+		<form id="searchForm">
+			<!-- SONG LENGTH SLIDER -->
+			<h2>Song Length</h2>
+			<input type="range" name="songLength" min="0" max="600">
+
+			<!-- ARTIST OPTION BOX-->
+			<h4>Artist:</h4>
+			<select name="artistOption">
+				<option value="Bruce Springsteen" selected="">Bruce Springsteen</option>
+				<option value="Devo">Devo</option>
+				<option value="R.E.M.">R.E.M.</option>
+				<option value="The Clash">The Clash</option>
+				<option value="The Replacements">The Replacements</option>
+			</select>
+
+			<!-- ALBUM OPTION BOX-->
+
+			<h4>Album:</h4>
+			<select name="albumOption">
+				<option value="Born to Run" selected="">Born to Run</option>
+				<option value="Freedom of Choice">Freedom of Choice</option>
+				<option value="Murmur">Murmur</option>
+				<option value="Give 'Em Enough Rope">Give 'Em Enough Rope</option>
+				<option value="Let It Be">Let It Be</option>
+			</select>
+
+
+			<!-- GENRE CHECKBOXES -->
+			<h2>Genre</h2>
+				<label><input type="checkbox" class="genreBox" name="genre" value="Rock">Rock</label>
+				<label><input type="checkbox" class="genreBox" name="genre" value="Pop">Pop</label>
+				<br>
+				<label><input type="checkbox" class="genreBox" name="genre" value="Jazz">Jazz</label>
+				<label><input type="checkbox" class="genreBox" name="genre" value="Hip-Hop">Hip-Hop</label>
+				<>
+				<label><input type="checkbox" class="genreBox" name="genre" value="Classical">Classical</label>
+				<label><input type="checkbox" class="genreBox" name="genre" value="Blues">Blues</label>
+
+
+			<input type="button" name="filter" value="Filter" class="block">
+		</form>
+
+	</section>
+
+<!-- RESULTS FIELD -->
+
+	<section id="results" class="border">
+
+		<h2>Song Name</h2>
+			<ul class="songResults">
+				<li>Artist Name</li>
+				<li>Album Name</li>
+				<li>Genre</li>
+			</ul>
+
+		<h2>Song Name</h2>
+			<ul class="songResults">
+				<li>Artist Name</li>
+				<li>Album Name</li>
+				<li>Genre</li>
+			</ul>
+
+		<h2>Song Name</h2>
+			<ul class="songResults">
+				<li>Artist Name</li>
+				<li>Album Name</li>
+				<li>Genre</li>
+			</ul>
+
+		<h2>Song Name</h2>
+			<ul class="songResults">
+				<li>Artist Name</li>
+				<li>Album Name</li>
+				<li>Genre</li>
+			</ul>
+
+		<h2>Song Name</h2>
+			<ul class="songResults">
+				<li>Artist Name</li>
+				<li>Album Name</li>
+				<li>Genre</li>
+			</ul>
+
+	</section>
+</div>
+</body>
+</html>

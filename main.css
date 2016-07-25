@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.block {
+	display: block;
+}
+
+#maindiv {
+	width: 90%;
+	margin: 0 auto;
+	padding-left: 100px;
+	padding-right: 100px;
+	display: block;
+	margin: 0 auto;
+}
+
+nav {
+	background: #FFB4B0;
+	display: block;
+	width: 100%;
+	margin: 10px auto;
+}
+
+nav ul li {
+	display: inline-block;
+	text-decoration: none;
+	text-align: left;
+	padding: 10px;
+}
+
+#sidebar {
+	background: #4DD7FA;
+	width: 20%;
+	height: auto;
+	display: inline-block;
+}
+
+#searchForm {
+	padding: 10px;
+}
+
+#results {
+	background: #FEFAC0;
+	width:  75%;
+	float: right;
+	display: inline-block;
+	min-height: 100%
+}
+
+#results h2 {
+	margin-left: 10px;
+}
+
+.border {
+	border: 3px solid black;
+}
+
+.genreBox {
+	display: inline-block;
+	margin: 5px;
+}
+
+.songResults li {
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px;
+	margin: 5px;
+}
+
+/*Red = #FFB4B0
+Blue = #4DD7FA
+Light yellow = #FEFAC0
+Dark yellow = #785616*/
