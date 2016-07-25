@@ -54,6 +54,13 @@ nav ul li {
 	margin-left: 10px;
 }
 
+#results li {
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px;
+	margin: 5px;
+}
+
 .border {
 	border: 3px solid black;
 }
@@ -63,12 +70,6 @@ nav ul li {
 	margin: 5px;
 }
 
-.songResults li {
-	display: inline-block;
-	text-decoration: none;
-	padding: 5px;
-	margin: 5px;
-}
 
 /*Red = #FFB4B0
 Blue = #4DD7FA
