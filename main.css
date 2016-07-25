@@ -74,6 +74,11 @@ nav ul li {
 	margin: 5px;
 }
 
+#addMusicForm {
+	width: 30%;
+	margin: 0 auto;
+}
+
 
 /*Red = #FFB4B0
 Blue = #4DD7FA

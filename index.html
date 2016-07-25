@@ -75,11 +75,21 @@
 </div>
 
 <div id="addMusic" class="hidden">
-<label>Song Name: <input type="textarea" name="name"></label>
-<label>Artist: <input type="textarea" name="artist"></label>
-<label>Album: <input type="textarea" name="album"></label><br>
-<button id="addButton">Add</button>
-
+	<section id="addMusicForm" class="border">
+		<label>Song Name: <input type="textarea" name="name"></label><br>
+		<label>Artist: <input type="textarea" name="artist"></label><br>
+		<label>Album: <input type="textarea" name="album"></label><br>
+		<select name="genreAddOption">
+			<option value="Rock" selected="">Rock</option>
+			<option value="Pop">Pop</option>
+			<option value="Jazz">Jazz</option>
+			<option value="Hip-Hop">Hip-Hop</option>
+			<option value="Alternative">Alternative</option>
+			<option value="Blues">Blues</option>
+		</select>
+		<br>
+		<button id="addButton">Add</button>
+	</section>
 </div>
 
 

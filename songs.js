@@ -1,3 +1,4 @@
+//SPA Functionality
 
 homeLink = document.getElementById("homeLink")
 homeLink.addEventListener("click", toggleHiddenMain)
@@ -17,11 +18,6 @@ function toggleHiddenMain(evt) {
   mainContentDiv.classList.remove("hidden")
   addMusicDiv.classList.add("hidden")
 }
-
-
-
-
-
 
 songNameField = document.getElementById("songNameField")
 artistNameField = document.getElementById("artistNameField")
@@ -62,6 +58,13 @@ var songs = [
           artist: "The Replacements",
           name: "Answering Machine",
           album: "Let It Be",
+          genre: "Alternative",
+        },
+
+        {
+          artist: "XTC",
+          name: "This Is Pop",
+          album: "White Music",
           genre: "Alternative",
         },
   ]
