@@ -1,9 +1,33 @@
+
+homeLink = document.getElementById("homeLink")
+homeLink.addEventListener("click", toggleHiddenMain)
+
+addMusicLink = document.getElementById("addMusicLink")
+addMusicLink.addEventListener("click", toggleHiddenAddMusic)
+
+addMusicDiv = document.getElementById("addMusic")
+mainContentDiv = document.getElementById("mainContent")
+
+function toggleHiddenAddMusic(evt) {
+  addMusicDiv.classList.remove("hidden")
+  mainContentDiv.classList.add("hidden")
+}
+
+function toggleHiddenMain(evt) {
+  mainContentDiv.classList.remove("hidden")
+  addMusicDiv.classList.add("hidden")
+}
+
+
+
+
+
+
 songNameField = document.getElementById("songNameField")
 artistNameField = document.getElementById("artistNameField")
 albumNameField = document.getElementById("albumNameField")
 genreField = document.getElementById("genreField")
 resultsField = document.getElementById("results")
-
 
 var songs = [
         {
@@ -53,20 +77,3 @@ function populateSongs(songs) {
     <li>${songs.genre}</li></ul>`
 
 }
-
-
-
-
-
-
-// function populateProducts() {
-//   for (i = 0; i < productSpecs.length; i++) {
-//     document.getElementById("products").innerHTML +=
-//     "<article>" + productSpecs[i].image + "</img>" +
-//     "<h1>" + productSpecs[i].name + "</h1>" +
-//     "<p>" + productSpecs[i].description + "</p>" +
-//     "<h3>Availability: " + productSpecs[i].availability + "</h3>" +
-//     "<h4>" + productSpecs[i].price + "</h4>"
-//     "</article>"
-//   }
-// }

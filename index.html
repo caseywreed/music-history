@@ -11,14 +11,14 @@
 
 	<nav id="navbar" class="border">
 		<ul>
-			<a href="#"><li>View Music</li></a>
-			<a href="#"><li>Add Music</li></a>
-			<a href="#"><li>Profile</li></a>
+			<a href="#" id="homeLink"><li>View Music</li></a>
+			<a href="#addMusic" id="addMusicLink"><li>Add Music</li></a>
+			<a href="#profile" id="profileLink"><li>Profile</li></a>
 		</ul>
 	</nav>
 
 <!-- SIDE BAR -->
-
+<div id="mainContent">
 	<section id="sidebar" class="border">
 
 		<form id="searchForm">
@@ -68,7 +68,22 @@
 <!-- RESULTS FIELD -->
 
 	<section id="results" class="border">
+
+
 	</section>
+
+</div>
+
+<div id="addMusic" class="hidden">
+<label>Song Name: <input type="textarea" name="name"></label>
+<label>Artist: <input type="textarea" name="artist"></label>
+<label>Album: <input type="textarea" name="album"></label><br>
+<button id="addButton">Add</button>
+
+</div>
+
+
+
 </div>
 
 
