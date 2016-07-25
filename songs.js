@@ -80,3 +80,11 @@ function populateSongs(songs) {
     <li>${songs.genre}</li></ul>`
 
 }
+
+
+
+//ADD MUSIC SECTION
+
+//The function should collect the values of the input fields,
+//add them to the songs object, and then re-run the populateSongs() function
+//to refresh the main page. Maybe it could even navigate to the main page itself?
