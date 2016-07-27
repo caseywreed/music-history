@@ -50,15 +50,18 @@
 
 			<!-- GENRE CHECKBOXES -->
 			<h2>Genre</h2>
+			<div class="j">
 				<label><input type="checkbox" class="genreBox" name="genre" value="Rock">Rock</label>
 				<label><input type="checkbox" class="genreBox" name="genre" value="Pop">Pop</label>
-				<br>
+			</div>
+			<div>
 				<label><input type="checkbox" class="genreBox" name="genre" value="Jazz">Jazz</label>
 				<label><input type="checkbox" class="genreBox" name="genre" value="Hip-Hop">Hip-Hop</label>
-				<br>
+			</div>
+			<div>
 				<label><input type="checkbox" class="genreBox" name="genre" value="Alternative">Alternative</label>
 				<label><input type="checkbox" class="genreBox" name="genre" value="Blues">Blues</label>
-
+			</div>
 
 			<input type="button" name="filter" value="Filter" class="block">
 		</form>
@@ -76,9 +79,16 @@
 
 <div id="addMusic" class="hidden">
 	<section id="addMusicForm" class="border">
-		<label>Song Name: <input type="textarea" name="name" id="addName"></label><br>
-		<label>Artist: <input type="textarea" name="artist" id="addArtist"></label><br>
-		<label>Album: <input type="textarea" name="album" id="addAlbum"></label><br>
+		<div class="block">
+		<label>Song Name: <input type="textarea" name="name" id="addName"></label>
+		</div>
+		<div class="block">
+		<label>Artist: <input type="textarea" name="artist" id="addArtist"></label>
+		</div>
+		<div class="block">
+		<label>Album: <input type="textarea" name="album" id="addAlbum"></label>
+		</div>
+		<div class="block">
 		<select name="genreAddOption" id="addGenre">
 			<option value="Rock" selected="">Rock</option>
 			<option value="Pop">Pop</option>
@@ -87,7 +97,8 @@
 			<option value="Alternative">Alternative</option>
 			<option value="Blues">Blues</option>
 		</select>
-		<br>
+		</div>
+
 		<button id="addButton">Add</button>
 	</section>
 </div>

@@ -12,6 +12,14 @@
 	display: block;
 }
 
+.justifyLeft {
+	text-align: justify left;
+}
+
+.justifyRight {
+	text-align: justify right;
+}
+
 #maindiv {
 	width: 90%;
 	margin: 0 auto;
