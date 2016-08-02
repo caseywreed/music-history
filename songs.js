@@ -1,69 +1,33 @@
+$(document).ready(function () {
+
 //SPA Functionality
 
-homeLink = document.getElementById("homeLink")
-homeLink.addEventListener("click", toggleHiddenMain)
+$("#homeLink").click(toggleHiddenMain)
+$("#addMusicLink").click(toggleHiddenAddMusic)
 
-addMusicLink = document.getElementById("addMusicLink")
-addMusicLink.addEventListener("click", toggleHiddenAddMusic)
 
-addMusicDiv = document.getElementById("addMusic")
-mainContentDiv = document.getElementById("mainContent")
+addMusicDiv = $("#addMusic")
+mainContentDiv = $("#mainContent")
 
 function toggleHiddenAddMusic(evt) {
-  addMusicDiv.classList.remove("hidden")
-  mainContentDiv.classList.add("hidden")
+  $("#addMusic").toggleClass("hidden")
+  $("#mainContent").toggleClass("hidden")
 }
 
 function toggleHiddenMain(evt) {
-  mainContentDiv.classList.remove("hidden")
-  addMusicDiv.classList.add("hidden")
+  $("#mainContent").toggleClass("hidden")
+  $("#addMusic").toggleClass("hidden")
 }
 
-var songs = [
-        {
-          artist: "Bruce Springsteen",
-          name: "Tenth Avenue Freeze-Out",
-          album: "Born to Run",
-          genre: "Rock",
-        },
+var songs = []
 
-        {
-          artist: "Devo",
-          name: "Whip It",
-          album: "Freedom of Choice",
-          genre: "Pop",
-        },
+var jqxhr = $.getJSON("songs.json").then(function(res) {
+  console.log( "success" );
+})
 
-        {
-          artist: "R.E.M.",
-          name: "Radio Free Europe",
-          album: "Murmur",
-          genre: "Alternative",
-        },
+console.log(jqxhr)
 
-        {
-          artist: "The Clash",
-          name: "Stay Free",
-          album: "Give 'Em Enough Rope",
-          genre: "Rock",
-        },
-
-        {
-          artist: "The Replacements",
-          name: "Answering Machine",
-          album: "Let It Be",
-          genre: "Alternative",
-        },
-
-        {
-          artist: "XTC",
-          name: "This Is Pop",
-          album: "White Music",
-          genre: "Alternative",
-        },
-  ]
-
-
+// console.log(songs)
 
 songNameField = document.getElementById("songNameField")
 artistNameField = document.getElementById("artistNameField")
@@ -71,7 +35,9 @@ albumNameField = document.getElementById("albumNameField")
 genreField = document.getElementById("genreField")
 resultsField = document.getElementById("results")
 
-songs.forEach(populateSongs)
+
+
+// songs.forEach(populateSongs)
 
 function populateSongs(songs) {
   resultsField.innerHTML +=
@@ -81,10 +47,6 @@ function populateSongs(songs) {
     <li>${songs.genre}</li></ul>`
 }
 
-
-
-
-
 //ADD MUSIC SECTION
 
 //The function should collect the values of the input fields,
@@ -93,8 +55,7 @@ function populateSongs(songs) {
 
 //EVENT LISTENERS
 
-addButton = document.getElementById("addButton")
-addButton.addEventListener("click", addSong)
+$("#addButton").click(addSong)
 
 addArtist = document.getElementById("addArtist")
 addName = document.getElementById("addName")
@@ -111,9 +72,10 @@ function addSong () {
   })
   console.log(songs)
   populateSongs(songs[songs.length - 1])
+  toggleHiddenMain();
 }
 
-
+});
 
 
 
