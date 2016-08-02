@@ -5,10 +5,6 @@ $(document).ready(function () {
 $("#homeLink").click(toggleHiddenMain)
 $("#addMusicLink").click(toggleHiddenAddMusic)
 
-
-// addMusicDiv = $("#addMusic")
-// mainContentDiv = $("#mainContent")
-
 function toggleHiddenAddMusic(evt) {
   $("#addMusic").toggleClass("hidden")
   $("#mainContent").toggleClass("hidden")
@@ -27,12 +23,10 @@ var jqxhr = $.getJSON("songs.json", function(res) {
 
 console.log(jqxhr)
 
-// console.log(songs)
-
-// songs.forEach(populateSongs)
+//ADD MUSIC SECTION
 
 function populateSongs(songs) {
-  resultsField.append(
+  $("#resultsField").append(
     `<h2>${songs.name}</h2>
     <ul><li>${songs.artist}</li>
     <li>${songs.album}</li>
@@ -40,11 +34,8 @@ function populateSongs(songs) {
     )
 }
 
-//ADD MUSIC SECTION
-
 //The function should collect the values of the input fields,
 //add them to the songs object, and then re-run the populateSongs() function
-//to refresh the main page. Maybe it could even navigate to the main page itself?
 
 //EVENT LISTENERS
 
@@ -54,14 +45,13 @@ function addSong () {
   console.log("addSong is running")
   console.log($("#addArtist").val)
   songs.push({
-    artist: $("#addArtist").value,
-    name: $("#addName").value,
-    album: $("#addAlbum").value,
-    genre: $("#addGenre").value,
+    artist: $("#addArtist").val(),
+    name: $("#addName").val(),
+    album: $("#addAlbum").val(),
+    genre: $("#addGenre").val(),
   })
   console.log(songs)
   populateSongs(songs)
-  // populateSongs(songs[songs.length - 1])
   toggleHiddenMain();
 }
 
