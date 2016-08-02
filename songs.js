@@ -6,8 +6,8 @@ $("#homeLink").click(toggleHiddenMain)
 $("#addMusicLink").click(toggleHiddenAddMusic)
 
 
-addMusicDiv = $("#addMusic")
-mainContentDiv = $("#mainContent")
+// addMusicDiv = $("#addMusic")
+// mainContentDiv = $("#mainContent")
 
 function toggleHiddenAddMusic(evt) {
   $("#addMusic").toggleClass("hidden")
@@ -21,30 +21,23 @@ function toggleHiddenMain(evt) {
 
 var songs = []
 
-var jqxhr = $.getJSON("songs.json").then(function(res) {
-  console.log( "success" );
+var jqxhr = $.getJSON("songs.json", function(res) {
+  console.log("success");
 })
 
 console.log(jqxhr)
 
 // console.log(songs)
 
-songNameField = document.getElementById("songNameField")
-artistNameField = document.getElementById("artistNameField")
-albumNameField = document.getElementById("albumNameField")
-genreField = document.getElementById("genreField")
-resultsField = document.getElementById("results")
-
-
-
 // songs.forEach(populateSongs)
 
 function populateSongs(songs) {
-  resultsField.innerHTML +=
+  resultsField.append(
     `<h2>${songs.name}</h2>
     <ul><li>${songs.artist}</li>
     <li>${songs.album}</li>
     <li>${songs.genre}</li></ul>`
+    )
 }
 
 //ADD MUSIC SECTION
@@ -57,21 +50,18 @@ function populateSongs(songs) {
 
 $("#addButton").click(addSong)
 
-addArtist = document.getElementById("addArtist")
-addName = document.getElementById("addName")
-addAlbum = document.getElementById("addAlbum")
-addGenre = document.getElementById("addGenre")
-
 function addSong () {
   console.log("addSong is running")
+  console.log($("#addArtist").val)
   songs.push({
-    artist: `${addArtist.value}`,
-    name: `${addName.value}`,
-    album: `${addAlbum.value}`,
-    genre: `${addGenre.value}`,
+    artist: $("#addArtist").value,
+    name: $("#addName").value,
+    album: $("#addAlbum").value,
+    genre: $("#addGenre").value,
   })
   console.log(songs)
-  populateSongs(songs[songs.length - 1])
+  populateSongs(songs)
+  // populateSongs(songs[songs.length - 1])
   toggleHiddenMain();
 }
 
