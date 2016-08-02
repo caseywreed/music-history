@@ -26,12 +26,16 @@ console.log(jqxhr)
 //ADD MUSIC SECTION
 
 function populateSongs(songs) {
+  console.log("inside populateSongs")
+  console.log(songs)
+  songs.forEach( function (song) {
+    console.log('inside for each')
   $("#resultsField").append(
-    `<h2>${songs.name}</h2>
-    <ul><li>${songs.artist}</li>
-    <li>${songs.album}</li>
-    <li>${songs.genre}</li></ul>`
-    )
+    `<h2>${song.name}</h2>
+    <ul><li>${song.artist}</li>
+    <li>${song.album}</li>
+    <li>${song.genre}</li></ul>`)
+    })
 }
 
 //The function should collect the values of the input fields,
@@ -43,14 +47,12 @@ $("#addButton").click(addSong)
 
 function addSong () {
   console.log("addSong is running")
-  console.log($("#addArtist").val)
   songs.push({
     artist: $("#addArtist").val(),
     name: $("#addName").val(),
     album: $("#addAlbum").val(),
     genre: $("#addGenre").val(),
   })
-  console.log(songs)
   populateSongs(songs)
   toggleHiddenMain();
 }
