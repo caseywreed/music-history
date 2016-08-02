@@ -19,12 +19,6 @@ function toggleHiddenMain(evt) {
   addMusicDiv.classList.add("hidden")
 }
 
-songNameField = document.getElementById("songNameField")
-artistNameField = document.getElementById("artistNameField")
-albumNameField = document.getElementById("albumNameField")
-genreField = document.getElementById("genreField")
-resultsField = document.getElementById("results")
-
 var songs = [
         {
           artist: "Bruce Springsteen",
@@ -70,6 +64,13 @@ var songs = [
   ]
 
 
+
+songNameField = document.getElementById("songNameField")
+artistNameField = document.getElementById("artistNameField")
+albumNameField = document.getElementById("albumNameField")
+genreField = document.getElementById("genreField")
+resultsField = document.getElementById("results")
+
 songs.forEach(populateSongs)
 
 function populateSongs(songs) {
@@ -79,6 +80,8 @@ function populateSongs(songs) {
     <li>${songs.album}</li>
     <li>${songs.genre}</li></ul>`
 }
+
+
 
 
 
