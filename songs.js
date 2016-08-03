@@ -20,20 +20,34 @@ function toggleHiddenMain() {
 var songs = []
 
 
-  //this should be where the .getJSON goes
-  var jqxhr = $.getJSON("songs.json")
-  console.log(jqxhr)
 
 
+$.getJSON("songs.json").then(function (data) {
+  console.log("json successfully loaded")
+  console.log(data)
+}).catch(function (res, textStatus, err) {
+  console.error(res, textStatus, err)
+})
 
+// $.getJSON("songs.json", function (data) {
+//   console.log("success", data)
+// })
+//   .done(function (data) {
+//     console.log("second success", data)
+//   })
+//   .fail(function (data) {
+//     console.log("it failed", data)
+//   })
+//   .always(function (data) {
+//     console.log("finished running", data)
+//   })
 
+// jqxhr.done(console.log(jqxhr.responseText))
 
 
 //ADD MUSIC SECTION
 
 function populateSongs(songs) {
-  console.log("inside populateSongs")
-  console.log(songs)
   $("#results").html("")
   songs.forEach( function (song) {
     console.log('inside for each')
@@ -53,7 +67,6 @@ function populateSongs(songs) {
 $("#addButton").click(addSong);
 
 function addSong () {
-  console.log("addSong is running")
   songs.push({
     artist: $("#addArtist").val(),
     name: $("#addName").val(),
