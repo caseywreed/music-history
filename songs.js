@@ -19,31 +19,12 @@ function toggleHiddenMain() {
 
 var songs = []
 
-
-
-
 $.getJSON("songs.json").then(function (data) {
   console.log("json successfully loaded")
   console.log(data)
-}).catch(function (res, textStatus, err) {
-  console.error(res, textStatus, err)
+  songs = data.songs;
+  populateSongs(songs)
 })
-
-// $.getJSON("songs.json", function (data) {
-//   console.log("success", data)
-// })
-//   .done(function (data) {
-//     console.log("second success", data)
-//   })
-//   .fail(function (data) {
-//     console.log("it failed", data)
-//   })
-//   .always(function (data) {
-//     console.log("finished running", data)
-//   })
-
-// jqxhr.done(console.log(jqxhr.responseText))
-
 
 //ADD MUSIC SECTION
 
