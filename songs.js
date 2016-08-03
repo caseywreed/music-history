@@ -40,11 +40,14 @@ function loadMoreSongs () {
 
 //ADD MUSIC SECTION
 
+//Trying to give each song an individual ID based on their index in the array each time populateSongs runs
+//This would make the deleteSong function work with the array
+
 function populateSongs(songs) {
   $("#results").html("")
-  songs.forEach( function (song) {
+  songs.forEach( function (song, index) {
     $("#results").append(
-    `<article class="songFile">
+    `<article class="songFile" id="`+index+`">
     <h2>${song.name}</h2>
     <ul><li>${song.artist}</li>
     <li>${song.album}</li>
