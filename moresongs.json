@@ -1,0 +1,40 @@
+{
+    "songs": [
+        {
+            "artist": "Depeche Mode",
+            "name": "John the Revelator",
+            "album": "Black Celebration",
+            "genre": "Alternative"
+        },
+        {
+            "artist": "Devo",
+            "name": "Whip It",
+            "album": "Freedom of Choice",
+            "genre": "Pop"
+        },
+        {
+            "artist": "R.E.M.",
+            "name": "Radio Free Europe",
+            "album": "Murmur",
+            "genre": "Alternative"
+        },
+        {
+            "artist": "The Clash",
+            "name": "Stay Free",
+            "album": "Give 'Em Enough Rope",
+            "genre": "Rock"
+        },
+        {
+            "artist": "The Replacements",
+            "name": "Answering Machine",
+            "album": "Let It Be",
+            "genre": "Alternative"
+        },
+        {
+            "artist": "XTC",
+            "name": "This Is Pop",
+            "album": "White Music",
+            "genre": "Alternative"
+        }
+    ]
+}

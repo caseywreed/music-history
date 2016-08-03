@@ -26,12 +26,27 @@ $.getJSON("songs.json").then(function (data) {
   populateSongs(songs)
 })
 
+function loadMoreSongs () {
+  $.getJSON("moresongs.json").then(function (data) {
+    var newSongs = data.songs
+      newSongs.forEach(function (song) {
+      $("#results").append(
+      `<h2>${song.name}</h2>
+      <ul><li>${song.artist}</li>
+      <li>${song.album}</li>
+      <li>${song.genre}</li></ul>`)
+      })
+  $("#results").append(`<button id="moreSongsButton">More Songs</button>`)
+  $("#moreSongsButton").click(loadMoreSongs)
+  })
+  }
+
+
 //ADD MUSIC SECTION
 
 function populateSongs(songs) {
   $("#results").html("")
   songs.forEach( function (song) {
-    console.log('inside for each')
     $("#results").append(
     `<h2>${song.name}</h2>
     <ul><li>${song.artist}</li>
@@ -39,6 +54,7 @@ function populateSongs(songs) {
     <li>${song.genre}</li></ul>`)
     })
   $("#results").append(`<button id="moreSongsButton">More Songs</button>`)
+  $("#moreSongsButton").click(loadMoreSongs)
   }
 
 //The function should collect the values of the input fields,
