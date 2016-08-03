@@ -7,34 +7,34 @@
             "genre": "Alternative"
         },
         {
-            "artist": "Devo",
-            "name": "Whip It",
-            "album": "Freedom of Choice",
+            "artist": "Duran Duran",
+            "name": "Girls on Film",
+            "album": "Duran Duran",
             "genre": "Pop"
         },
         {
-            "artist": "R.E.M.",
-            "name": "Radio Free Europe",
-            "album": "Murmur",
-            "genre": "Alternative"
-        },
-        {
-            "artist": "The Clash",
-            "name": "Stay Free",
-            "album": "Give 'Em Enough Rope",
+            "artist": "Jackson Browne",
+            "name": "Fountain of Sorrow",
+            "album": "Late for the Sky",
             "genre": "Rock"
         },
         {
-            "artist": "The Replacements",
-            "name": "Answering Machine",
-            "album": "Let It Be",
-            "genre": "Alternative"
+            "artist": "The Cure",
+            "name": "Just Like Heaven",
+            "album": "Kiss Me, Kiss Me, Kiss Me",
+            "genre": "Pop"
         },
         {
-            "artist": "XTC",
-            "name": "This Is Pop",
-            "album": "White Music",
-            "genre": "Alternative"
+            "artist": "The Protomen",
+            "name": "Light Up The Night",
+            "album": "Act II: The Father of Death",
+            "genre": "Rock"
+        },
+        {
+            "artist": "Cher",
+            "name": "I Found Someone",
+            "album": "Cher",
+            "genre": "Pop"
         }
     ]
 }
