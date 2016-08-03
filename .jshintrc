@@ -1,0 +1,18 @@
+{
+  "esversion": 6,
+  "globalstrict": true,
+  "curly": true,
+  "eqeqeq": true,
+  "undef": true,
+  "unused": true,
+  "browser": true,
+  "browserify": true,
+  "devel": true,
+  "jasmine": true,
+  "jquery": true,
+  "asi": true,
+  "globals": {
+    "angular": true,
+    "moment": true
+  }
+}

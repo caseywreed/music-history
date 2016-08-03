@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function () {
 
 //SPA Functionality
@@ -5,32 +7,39 @@ $(document).ready(function () {
 $("#homeLink").click(toggleHiddenMain)
 $("#addMusicLink").click(toggleHiddenAddMusic)
 
-function toggleHiddenAddMusic(evt) {
-  $("#addMusic").toggleClass("hidden")
-  $("#mainContent").toggleClass("hidden")
+function toggleHiddenAddMusic() {
+  $("#addMusic").removeClass("hidden");
+  $("#mainContent").addClass("hidden")
 }
 
-function toggleHiddenMain(evt) {
-  $("#mainContent").toggleClass("hidden")
-  $("#addMusic").toggleClass("hidden")
+function toggleHiddenMain() {
+  $("#mainContent").removeClass("hidden")
+  $("#addMusic").addClass("hidden")
 }
 
 var songs = []
 
-var jqxhr = $.getJSON("songs.json", function(res) {
-  console.log("success");
-})
 
-console.log(jqxhr)
+  //this should be where the .getJSON goes
+  var jqxhr = $.getJSON("songs.json", function(res) {
+    console.log("success")
+    console.log(jqxhr)
+  });
+
+
+
+
+
 
 //ADD MUSIC SECTION
 
 function populateSongs(songs) {
   console.log("inside populateSongs")
   console.log(songs)
+  $("#results").html("")
   songs.forEach( function (song) {
     console.log('inside for each')
-  $("#resultsField").append(
+    $("#results").append(
     `<h2>${song.name}</h2>
     <ul><li>${song.artist}</li>
     <li>${song.album}</li>
@@ -43,7 +52,7 @@ function populateSongs(songs) {
 
 //EVENT LISTENERS
 
-$("#addButton").click(addSong)
+$("#addButton").click(addSong);
 
 function addSong () {
   console.log("addSong is running")

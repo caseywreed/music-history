@@ -1,0 +1,24 @@
+{
+  "name": "music-history",
+  "version": "1.0.0",
+  "description": "",
+  "main": "songs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caseywreed/music-history.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caseywreed/music-history/issues"
+  },
+  "homepage": "https://github.com/caseywreed/music-history#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

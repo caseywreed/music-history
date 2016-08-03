@@ -11,7 +11,7 @@
 
 <!-- NAVIGATION BAR -->
 
-	<nav id="navbar" class="border">
+	<nav id="navbar" class="border col-md-12 row">
 		<ul>
 			<a href="#" id="homeLink"><li>View Music</li></a>
 			<a href="#addMusic" id="addMusicLink"><li>Add Music</li></a>
@@ -22,7 +22,7 @@
 <!-- SIDE BAR -->
 
 <div id="mainContent">
-	<section id="sidebar" class="border">
+	<section id="sidebar" class="border row">
 
 		<form id="searchForm">
 			<!-- SONG LENGTH SLIDER -->
@@ -73,15 +73,15 @@
 
 <!-- RESULTS FIELD -->
 
-	<section id="results" class="border">
+	<section id="results" class="row border"></section>
+	<button id="moreSongsButton">More Songs</button>
 
 
-	</section>
-
-</div>
+</div> <!--END MAIN CONTENT DIV-->
 
 <div id="addMusic" class="hidden">
-	<section id="addMusicForm" class="border">
+	<section class="row col-md-5"></section> <!--SPACE DIV-->
+	<section id="addMusicForm" class="border row col-md-4">
 		<div class="block">
 		<label>Song Name: <input type="textarea" name="name" id="addName"></label>
 		</div>
