@@ -41,7 +41,7 @@ function loadMoreSongs () {
 //ADD MUSIC SECTION
 
 //Trying to give each song an individual ID based on their index in the array each time populateSongs runs
-//This would make the deleteSong function work with the array
+//This would make the deleteSong function work with the array slice/splice/whatever method
 
 function populateSongs(songs) {
   $("#results").html("")
@@ -62,7 +62,8 @@ function populateSongs(songs) {
   $(".deleteButton").on("click", function (evt) {
     console.log("deleteSong running")
     console.log(evt)
-    evt.target.closest(".songFile").classList.add("hidden")
+    var songId = evt.target.closest(".songFile").id
+    console.log(songId)
   })
 }
 
