@@ -21,10 +21,8 @@ var songs = []
 
 
   //this should be where the .getJSON goes
-  var jqxhr = $.getJSON("songs.json", function(res) {
-    console.log("success")
-    console.log(jqxhr)
-  });
+  var jqxhr = $.getJSON("songs.json")
+  console.log(jqxhr)
 
 
 
