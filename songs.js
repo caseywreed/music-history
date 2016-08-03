@@ -38,7 +38,8 @@ function populateSongs(songs) {
     <li>${song.album}</li>
     <li>${song.genre}</li></ul>`)
     })
-}
+  $("#results").append(`<button id="moreSongsButton">More Songs</button>`)
+  }
 
 //The function should collect the values of the input fields,
 //add them to the songs object, and then re-run the populateSongs() function
