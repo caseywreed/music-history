@@ -47,7 +47,7 @@ function populateSongs(songs) {
   $("#results").html("")
   songs.forEach( function (song, index) {
     $("#results").append(
-    `<article class="songFile" id="`+index+`">
+    `<article class="songFile" id="`+ index +`">
     <h2>${song.name}</h2>
     <ul><li>${song.artist}</li>
     <li>${song.album}</li>
@@ -60,10 +60,9 @@ function populateSongs(songs) {
   $("#moreSongsButton").click(loadMoreSongs)
 
   $(".deleteButton").on("click", function (evt) {
-    console.log("deleteSong running")
-    console.log(evt)
     var songId = evt.target.closest(".songFile").id
-    console.log(songId)
+    songs.splice(songId, 1)
+    populateSongs(songs)
   })
 }
 
