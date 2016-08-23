@@ -58,7 +58,7 @@ nav ul li {
 	background: #FEFAC0;
 	width:  75%;
 	float: right;
-	display: inline-block;
+	display: block;
 	min-height: 100%
 }
 
@@ -83,12 +83,6 @@ nav ul li {
 }
 
 #addMusicForm {
-	width: 30%;
+	min-width: 30%;
 	margin: 0 auto;
 }
-
-
-/*Red = #FFB4B0
-Blue = #4DD7FA
-Light yellow = #FEFAC0
-Dark yellow = #785616*/

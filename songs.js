@@ -19,22 +19,38 @@ function toggleHiddenMain() {
 
 var songs = []
 
-$.getJSON("songs.json").then(function (data) {
-  console.log("json successfully loaded")
-  console.log(data)
-  songs = data.songs;
-  populateSongs(songs)
-})
+// $.getJSON("https://music-history-9b169.firebaseio.com/songs.json").then(function (data) {
+//   console.log("json successfully loaded")
+//   console.log(data)
+//   songs = data.songs;
+//   populateSongs(songs)
+// })
+
+function getSongs (callback) {
+  return new Promise ( function () {
+    $.ajax({
+      url: 'https://music-history-9b169.firebaseio.com/songs.json'
+    }).done(function (songData) {
+      for (let song in songData) {
+        songs.push(songData[song])
+      }
+      callback(songs)
+    })
+  })
+}
 
 //Grabs the second JSON file and appends each song onto the end of the array
 
 function loadMoreSongs () {
-  $.getJSON("moresongs.json").then(function (data) {
-    var newSongs = data.songs
-      newSongs.forEach(function (song) {
-        songs.push(song)
-      })
-    populateSongs(songs)
+  return new Promise ( function () {
+    $.ajax({
+      url: 'https://music-history-9b169.firebaseio.com/moresongs.json'
+    }).done(function (songData) {
+      for (let song in songData) {
+        songs.push(songData[song])
+      }
+      populateSongs(songs)
+    })
   })
 }
 
@@ -90,7 +106,11 @@ function deleteSong (evt) {
   console.log(evt)
 }
 
+getSongs(populateSongs)
+
 });
+
+
 
 
 
